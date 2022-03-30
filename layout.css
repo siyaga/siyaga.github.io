@@ -21,7 +21,7 @@
 }
 
 button{
-    margin:5px;
+    margin:7px;
     height: 80px;
     background-color: gray;
     border: 1px solid black;
@@ -29,6 +29,8 @@ button{
     color: #fff;
     width: 25%;
     outline: none;
+    cursor: pointer;
+     box-shadow: 0 7px #000000;
 }
 
 .all-clear, .zero-btn{
@@ -43,4 +45,14 @@ button:hover{
 }
 .operator:hover{
     background-color: darkorange;
+}
+button:active{
+    box-shadow:none;
+  position:relative;
+  top:7px;
+}
+.operator:active{
+    box-shadow:none;
+  position:relative;
+  top:7px;
 }

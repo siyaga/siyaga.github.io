@@ -1,11 +1,13 @@
 .calculator{
     text-align: center;
-    margin:0 auto;
+    margin: 50px auto;
     padding-top: 100px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 100px;
-    border-radius: 1px solid #252525;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 2px solid #252525;
 }
 
 .calculator-screen{
@@ -35,7 +37,7 @@ button{
     width: 25%;
     outline: none;
     cursor: pointer;
-     box-shadow: 0 7px #000000;
+    box-shadow: 0 7px #4b4b4b;
 }
 
 .all-clear, .zero-btn{

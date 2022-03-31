@@ -3,6 +3,11 @@ const calculatorScreen = document.querySelector(".calculator-screen");
 let prevNumber = "";
 let calculationOperator = "";
 let currentNumber="0";
+var bel = new Audio('sound.mp3');
+function bunyi() {
+  bel.currentTime = 0;
+  bel.play();
+}
 
 const updateScreen = (number) => {
     calculatorScreen.value = number
@@ -11,6 +16,7 @@ const numbers = document.querySelectorAll(".number");
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
+        bunyi()
         updateScreen(event.target.value)
     });
 });
@@ -26,6 +32,7 @@ const inputNumber = (number) => {
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
+        bunyi()
         inputNumber(event.target.value)
         updateScreen(currentNumber)
     });
@@ -35,6 +42,7 @@ const operators = document.querySelectorAll(".operator");
 
 operators.forEach((operator) => {
     operator.addEventListener("click", (event) => {
+        bunyi()
         inputOperator(event.target.value)
     });
 });
@@ -54,7 +62,7 @@ const inputOperator = (operator) => {
 const equalSign = document.querySelector(".equal-sign");
 
 equalSign.addEventListener('click', () => {
-   
+        bunyi()
         calculate()
         updateScreen(currentNumber)
   
@@ -95,6 +103,7 @@ const clearAll = () => {
 const clearBtn = document.querySelector(".all-clear");
 
 clearBtn.addEventListener("click", () => {
+    bunyi()
     clearAll()
     updateScreen(currentNumber)
 })
@@ -109,7 +118,7 @@ inputDecimal = (dot) => {
 const decimal = document.querySelector(".decimal");
 
 decimal.addEventListener("click", (event) => {
-    
+    bunyi()
     inputDecimal(event.target.value)
     updateScreen(currentNumber)
 })
@@ -124,6 +133,7 @@ inputPercentage = (per) => {
 }
 
 percentage.addEventListener("click" , (event)=> {
+    bunyi()
     inputPercentage(event.target.value)
     updateScreen(currentNumber)
 })

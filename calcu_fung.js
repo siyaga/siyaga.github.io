@@ -114,4 +114,18 @@ decimal.addEventListener("click", (event) => {
     updateScreen(currentNumber)
 })
 
+const percentage = document.querySelector("percentage")
+
+inputPercentage = (per) => {
+    if(currentNumber.includes('%')){
+        return
+    }                             
+    currentNumber +=per
+}
+
+percentage.addEventListener("click" , (event)=> {
+    inputPercentage(event.target.value)
+    updateScreen(currentNumber)
+})
+
 

@@ -4,7 +4,8 @@
     padding-top: 100px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 100;
+    padding-bottom: 100px;
+    border-radius: 1px solid #252525;
 }
 
 .calculator-screen{
